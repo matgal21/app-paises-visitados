@@ -43,7 +43,7 @@ const WorldMap: React.FC<WorldMapProps> = ({ visitedCountries, onCountryClick })
     return (
       <div className="bg-white rounded-xl shadow-lg p-4 relative min-h-[400px] flex items-center justify-center">
         <div className="text-center">
-          <Loader2 className="w-8 h-8 text-indigo-600 animate-spin mx-auto" />
+          <Loader2 className="w-8 h-8 text-indigo-900 animate-spin mx-auto" />
           <p className="mt-2 text-gray-600">Cargando mapa...</p>
         </div>
       </div>
@@ -52,7 +52,7 @@ const WorldMap: React.FC<WorldMapProps> = ({ visitedCountries, onCountryClick })
 
   if (error || !mapData) {
     return (
-      <div className="bg-white rounded-xl shadow-lg p-4 relative min-h-[400px] flex items-center justify-center">
+      <div className="bg-black rounded-xl shadow-lg p-4 relative min-h-[400px] flex items-center justify-center">
         <div className="text-center">
           <AlertCircle className="w-8 h-8 text-red-500 mx-auto" />
           <p className="mt-2 text-gray-800">{error || 'Error loading map data'}</p>
@@ -68,12 +68,12 @@ const WorldMap: React.FC<WorldMapProps> = ({ visitedCountries, onCountryClick })
   }
 
   return (
-    <div className="bg-white rounded-xl shadow-lg p-4 relative min-h-[400px]">
+    <div className="bg-blue-300 rounded-xl shadow-lg p-4 relative min-h-[400px]">
       <ComposableMap
         projection="geoMercator"
         projectionConfig={{
-          scale: 147,
-          center: [0, 30]
+          scale: 200,
+          center: [0, 25]
         }}
         style={{
           width: "100%",
@@ -96,13 +96,13 @@ const WorldMap: React.FC<WorldMapProps> = ({ visitedCountries, onCountryClick })
                     onClick={() => onCountryClick(countryName)}
                     style={{
                       default: {
-                        fill: isVisited ? '#4F46E5' : '#D1D5DB',
-                        stroke: '#FFFFFF',
+                        fill: isVisited ? '#38b000' : '#D1D5DB',
+                        stroke: '#000',
                         strokeWidth: 0.5,
                         outline: 'none',
                       },
                       hover: {
-                        fill: isVisited ? '#4338CA' : '#9CA3AF',
+                        fill: isVisited ? '#008000' : '#9CA3AF',
                         stroke: '#FFFFFF',
                         strokeWidth: 0.5,
                         outline: 'none',

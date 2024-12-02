@@ -127,13 +127,13 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+    <div className="min-h-screen bg-gradient-to-br from-blue-800 to-sky-500">
       <nav className="bg-white shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16 items-center">
             <div className="flex items-center">
               <Plane className="h-8 w-8 text-indigo-600" />
-              <span className="ml-2 text-xl font-bold text-gray-800">Travel Tracker</span>
+              <span className="ml-2 text-xl font-bold text-gray-800">Países Visitados Web</span>
             </div>
             <div className="flex items-center gap-4">
               {isOffline && (
